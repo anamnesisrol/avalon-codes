@@ -129,8 +129,8 @@
 body:not(.theme-dark) .av-sig-santiago__field{box-shadow:0 14px 30px rgba(23,55,82,.26)!important}
 body:not(.theme-dark) .av-sig-santiago__photo{border:1px solid rgba(23,55,82,.58)}
 body:not(.theme-dark) .av-sig-santiago__photo--main{box-shadow:8px 9px 0 var(--san-orange),0 13px 26px rgba(23,55,82,.3)!important}
-body:not(.theme-dark) .av-sig-santiago__label{padding:4px 7px 4px 4px;background:rgba(255,243,223,.96)!important;color:var(--san-navy)!important;border:1px solid rgba(23,55,82,.24);box-shadow:4px 4px 0 rgba(220,113,49,.2);text-shadow:none}
-body:not(.theme-dark) .av-sig-santiago__label:before{border-color:var(--san-navy);color:var(--san-navy);background:var(--san-cream)}
+body:not(.theme-dark) .av-sig-santiago__label{padding:4px 7px 4px 4px;background:var(--san-navy)!important;color:var(--san-cream)!important;border:1px solid rgba(23,55,82,.72);box-shadow:4px 4px 0 rgba(220,113,49,.32);text-shadow:none}
+body:not(.theme-dark) .av-sig-santiago__label:before{border-color:var(--san-orange);color:var(--san-cream);background:var(--san-orange)}
 body:not(.theme-dark) .av-sig-santiago__axis{background:linear-gradient(90deg,transparent,var(--san-navy) 15%,var(--san-orange) 48%,var(--san-blue) 77%,transparent)}
 body:not(.theme-dark) .av-sig-santiago__axis:after{background:repeating-linear-gradient(90deg,var(--san-orange) 0 3px,transparent 3px 8px)}
 
