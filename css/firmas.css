@@ -213,3 +213,68 @@ body:not(.theme-dark) .av-sig-santiago__axis:after{background:repeating-linear-g
 .av-sig-jamie__pulse{left:6%;right:6%;top:auto;bottom:22%;height:20px}
 .av-sig-jamie__pulse:before{left:-100%;width:200%;opacity:.62}
 
+/* DISTINCT REDESIGN PASS — SAYANA / LAÍSA / BRUNO / BENJAMIN */
+/* SAYANA — jewel medallion */
+.av-sig-sayana__field{inset:8% 4%;background:radial-gradient(circle at 36% 50%,rgba(65,111,189,.22),transparent 29%),var(--sy-black);clip-path:none;border:1px solid rgba(216,168,100,.32);border-radius:120px 18px 120px 18px;box-shadow:0 13px 27px rgba(17,17,18,.28)}
+.av-sig-sayana__field:before{right:auto;left:7%;top:4%;width:58%;border-color:rgba(216,168,100,.45);box-shadow:0 0 0 10px rgba(112,47,59,.12),0 0 0 21px rgba(65,111,189,.06)}
+.av-sig-sayana__field:after{left:auto;right:8%;top:15%;width:1px;height:70%;background:linear-gradient(transparent,var(--sy-gold),transparent);box-shadow:none}
+.av-sig-sayana__photo{left:8%;right:auto;top:12%;width:49%;height:76%;border:5px solid var(--sy-ink);border-radius:50%;clip-path:none;box-shadow:0 0 0 2px var(--sy-gold),0 0 0 9px rgba(112,47,59,.22)}
+.av-sig-sayana__photo img{object-position:48% 38%;filter:saturate(.78) contrast(1.08) brightness(.8)}
+.av-sig-sayana__photo:before{border-radius:50%}
+.av-sig-sayana__photo:after{border-radius:50%;background:radial-gradient(circle,transparent 48%,rgba(17,17,18,.62))}
+.av-sig-sayana__copy{left:auto;right:7%;top:25%;width:47%;text-align:center}
+.av-sig-sayana__tag{margin:0 auto 13px;padding:0 0 6px;border:0;border-bottom:1px solid var(--sy-bronze);background:none;transform:none}
+.av-sig-sayana__first{margin:auto;color:var(--sy-gold);font-size:49px;font-size:9.8cqw;line-height:.8}
+.av-sig-sayana__last{margin:16px auto 0;color:var(--sy-blue);font-size:17px;font-size:3.4cqw;letter-spacing:.28em;text-indent:.28em}
+.av-sig-sayana__jewel{left:auto;right:21%;bottom:14%;gap:11px}
+.av-sig-sayana__jewel i{width:9px;height:9px}
+.av-sig-sayana__line{left:57%;top:13%;height:74%;transform:none}
+
+/* LAÍSA — material board */
+.av-sig-laisa__field{inset:6% 3%;background:var(--ls-espresso);clip-path:none;border:1px solid rgba(207,127,152,.32);box-shadow:0 13px 28px rgba(36,21,45,.27);display:grid}
+.av-sig-laisa__field:before{inset:12px;background:linear-gradient(90deg,transparent 32%,rgba(207,127,152,.12) 32% 32.4%,transparent 32.4% 73%,rgba(207,127,152,.1) 73% 73.4%,transparent 73.4%),linear-gradient(0deg,transparent 48%,rgba(207,127,152,.1) 48% 48.5%,transparent 48.5%);opacity:1}
+.av-sig-laisa__field:after{left:auto;right:3%;top:5%;width:19%;height:28%;border:0;background:var(--ls-walnut);box-shadow:-61px 98px 0 var(--ls-olive),-127px 16px 0 var(--ls-copper);opacity:.3}
+.av-sig-laisa__photo{left:29%;right:auto;top:8%;width:43%;height:84%;clip-path:none;border:7px solid var(--ls-walnut);box-shadow:7px 8px 0 var(--ls-olive)}
+.av-sig-laisa__photo img{object-position:50% 34%;filter:saturate(.86) contrast(1.08) brightness(.84)}
+.av-sig-laisa__photo:after{background:linear-gradient(180deg,transparent 54%,rgba(36,21,45,.54))}
+.av-sig-laisa__copy{left:4%;right:auto;top:13%;width:92%;height:76%;text-align:left}
+.av-sig-laisa__theme{position:absolute;right:0;top:0;margin:0;padding:5px 8px;background:var(--ls-copper);transform:none}
+.av-sig-laisa__first{position:absolute;left:0;top:2%;writing-mode:vertical-rl;transform:rotate(180deg);color:var(--ls-sand);font-family:"Syne",sans-serif;font-size:35px;font-size:7cqw;font-style:normal;font-weight:800;line-height:.8;letter-spacing:-.06em;text-shadow:none}
+.av-sig-laisa__last{position:absolute;right:0;top:34%;width:25%;margin:0;color:#7899cc;font-family:"Space Mono",monospace;font-size:8px;font-size:1.6cqw;line-height:1.6;letter-spacing:.13em;text-indent:0;white-space:normal;text-align:right;filter:none}
+.av-sig-laisa__swatches{left:auto;right:5%;bottom:9%;display:grid;grid-template-columns:repeat(2,24px);gap:5px}
+.av-sig-laisa__swatches i,.av-sig-laisa__swatches i:nth-child(2),.av-sig-laisa__swatches i:nth-child(3),.av-sig-laisa__swatches i:nth-child(4){width:24px;height:24px;animation:av-laisa-swatches 5.8s ease-in-out infinite}
+.av-sig-laisa__mark{left:auto;right:4%;bottom:35%;width:21%;text-align:right;line-height:1.45}
+.av-sig-laisa__axis{left:75%;top:12%;height:76%;transform:none}
+
+/* BRUNO — full bleed signal */
+.av-sig-bruno__field{inset:5% 3%;background:var(--br-night);clip-path:none;border:1px solid rgba(79,199,195,.25);box-shadow:0 13px 27px rgba(18,15,27,.28)}
+.av-sig-bruno__field:before{background:linear-gradient(90deg,rgba(18,15,27,.06),rgba(18,15,27,.22) 42%,rgba(45,32,68,.9) 78%),repeating-linear-gradient(0deg,transparent 0 5px,rgba(79,199,195,.025) 5px 6px)}
+.av-sig-bruno__field:after{right:3%;top:8%;width:1px;height:84%;background:linear-gradient(transparent,var(--br-cyan),transparent);box-shadow:none}
+.av-sig-bruno__photo--main{left:3%;top:5%;width:94%;height:90%;clip-path:none;box-shadow:none;transform:none}
+.av-sig-bruno__photo--main img{object-position:37% 38%;filter:saturate(.62) contrast(1.14) brightness(.67)}
+.av-sig-bruno__photo--main:after{background:linear-gradient(90deg,transparent 0 31%,rgba(18,15,27,.34) 49%,rgba(18,15,27,.92) 76%)}
+.av-sig-bruno__eyes{left:4%;right:4%;bottom:10%;width:auto;height:12%;border:0;border-top:1px solid var(--br-magenta);border-bottom:1px solid var(--br-cyan);box-shadow:none;transform:none;opacity:.72}
+.av-sig-bruno__eyes img{object-position:50% 34%;filter:grayscale(1) contrast(1.4) brightness(.55);transform:scale(1.5)}
+.av-sig-bruno__copy{left:8%;right:5%;top:27%;width:auto;text-align:right}
+.av-sig-bruno__tag{margin:0 0 10px auto;background:none;border-right:4px solid var(--br-cyan);padding:3px 8px;color:var(--br-cyan);transform:none}
+.av-sig-bruno__first{color:transparent;font-family:"Anton",sans-serif;font-size:73px;font-size:14.6cqw;font-style:normal;line-height:.75;letter-spacing:.03em;text-shadow:none;-webkit-text-stroke:1px var(--br-steel)}
+.av-sig-bruno__last{margin-top:11px;color:var(--br-magenta);font-size:18px;font-size:3.6cqw;letter-spacing:.45em;text-indent:.45em}
+.av-sig-bruno__signal{right:6%;bottom:5%;color:var(--br-cyan)}
+.av-sig-bruno__axis{left:66%;top:8%;height:84%;transform:none}
+
+/* BENJAMIN — open casebook */
+.av-sig-benjamin__field{inset:6% 3%;background:linear-gradient(90deg,var(--bf-night) 0 49.7%,#213440 50%,var(--bf-wine) 50.3% 100%);clip-path:none;border:1px solid rgba(145,163,170,.28);border-radius:3px 14px 14px 3px;box-shadow:0 13px 28px rgba(20,27,32,.28)}
+.av-sig-benjamin__field:before{inset:11px;background:repeating-linear-gradient(0deg,transparent 0 25px,rgba(145,163,170,.065) 25px 26px);opacity:.75}
+.av-sig-benjamin__field:after{left:50%;right:auto;top:3%;width:1px;height:94%;background:linear-gradient(transparent,rgba(145,163,170,.36),transparent);box-shadow:-5px 0 12px rgba(0,0,0,.2),5px 0 12px rgba(0,0,0,.16)}
+.av-sig-benjamin__photo{left:50%;right:auto;top:16%;width:31%;height:62%;border:5px solid var(--bf-night);border-radius:50%;clip-path:none;box-shadow:0 0 0 2px var(--bf-leather),0 7px 17px rgba(20,27,32,.3);transform:translateX(-50%)}
+.av-sig-benjamin__photo img{object-position:48% 43%;filter:saturate(.58) contrast(1.1) brightness(.78)}
+.av-sig-benjamin__photo:before,.av-sig-benjamin__photo:after{border-radius:50%}
+.av-sig-benjamin__photo:after{background:radial-gradient(circle,transparent 50%,rgba(23,35,44,.55))}
+.av-sig-benjamin__copy{left:6%;right:6%;top:18%;width:auto;text-align:left}
+.av-sig-benjamin__tag{margin:0;padding:0 0 5px;background:none;border-bottom:1px solid var(--bf-leather);color:var(--bf-smoke);transform:none}
+.av-sig-benjamin__first{position:absolute;left:0;top:42px;color:var(--bf-smoke);font-size:35px;font-size:7cqw;line-height:.86}
+.av-sig-benjamin__last{position:absolute;right:0;top:43px;margin:0;color:#bd7883;font-size:15px;font-size:3cqw;line-height:1.25;letter-spacing:.18em;text-indent:.18em;filter:none}
+.av-sig-benjamin__motto{right:6%;bottom:13%;border-bottom-color:var(--bf-leather)}
+.av-sig-benjamin__books{left:7%;bottom:10%}
+.av-sig-benjamin__axis{left:50%;top:7%;height:86%;transform:none}
+
