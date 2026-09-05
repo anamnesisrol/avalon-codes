@@ -278,3 +278,25 @@ body:not(.theme-dark) .av-sig-santiago__axis:after{background:repeating-linear-g
 .av-sig-benjamin__books{left:7%;bottom:10%}
 .av-sig-benjamin__axis{left:50%;top:7%;height:86%;transform:none}
 
+/* BENJAMIN CINEMATIC REDESIGN */
+.av-sig-benjamin{--bf-night:#111c24;--bf-blue:#29475b;--bf-wine:#713545;--bf-leather:#c0834f;--bf-smoke:#96adb5}
+.av-sig-benjamin__field{inset:4% 2%;overflow:hidden;background:var(--bf-night);clip-path:none;border:1px solid rgba(150,173,181,.25);border-radius:22px 5px 22px 5px;box-shadow:0 16px 32px rgba(17,28,36,.3)}
+.av-sig-benjamin__field:before{content:"";position:absolute;inset:9px;border:1px solid rgba(192,131,79,.18);border-radius:16px 2px 16px 2px;background:none;opacity:1}
+.av-sig-benjamin__field:after{content:"";position:absolute;left:4%;right:4%;top:auto;bottom:13%;width:auto;height:1px;background:linear-gradient(90deg,transparent,var(--bf-leather) 30% 72%,transparent);box-shadow:none}
+.av-sig-benjamin__photo{z-index:1;left:3%;right:auto;top:5%;width:94%;height:90%;border:0;border-radius:18px 4px 18px 4px;clip-path:none;box-shadow:none;transform:none}
+.av-sig-benjamin__photo img{object-position:50% 48%;filter:saturate(.68) contrast(1.08) brightness(.72)}
+.av-sig-benjamin__photo:before{content:"";position:absolute;z-index:4;inset:-55% -90%;border-radius:0;background:linear-gradient(112deg,transparent 42%,rgba(192,131,79,.05) 46%,rgba(235,183,116,.5) 50%,rgba(41,71,91,.1) 55%,transparent 60%);mix-blend-mode:screen;transform:translateX(-42%) rotate(-5deg);animation:av-benjamin-cinema-light 6.8s ease-in-out infinite;pointer-events:none}
+.av-sig-benjamin__photo:after{content:"";position:absolute;z-index:3;inset:0;border-radius:18px 4px 18px 4px;background:linear-gradient(90deg,rgba(17,28,36,.28) 0,transparent 28%,transparent 50%,rgba(17,28,36,.5) 72%,rgba(17,28,36,.94) 100%),linear-gradient(0deg,rgba(113,53,69,.3),transparent 42%);pointer-events:none}
+.av-sig-benjamin__copy{z-index:7;left:auto;right:6%;top:28%;width:46%;height:auto;text-align:right}
+.av-sig-benjamin__tag{position:static;display:block;width:max-content;margin:0 0 11px auto;padding:0 0 6px;background:none;border:0;border-bottom:1px solid var(--bf-leather);color:var(--bf-smoke);font-family:"Space Mono",monospace;font-size:7px;font-size:1.4cqw;font-style:normal;font-weight:700;line-height:1;letter-spacing:.2em;text-transform:uppercase;transform:none}
+.av-sig-benjamin__first{position:static;display:block;width:max-content;margin-left:auto;color:var(--bf-leather);font-family:"Bodoni Moda",Georgia,serif;font-size:51px;font-size:10.2cqw;font-style:italic;font-weight:600;line-height:.78;letter-spacing:-.06em;text-shadow:3px 4px 0 rgba(17,28,36,.7);white-space:nowrap}
+.av-sig-benjamin__last{position:static;display:block;width:max-content;margin:15px 0 0 auto;color:var(--bf-smoke);font-family:"Syne",sans-serif;font-size:17px;font-size:3.4cqw;font-weight:800;line-height:1;letter-spacing:.28em;text-indent:.28em;text-transform:uppercase;filter:drop-shadow(2px 2px 0 rgba(17,28,36,.85));white-space:nowrap}
+.av-sig-benjamin__motto{z-index:8;right:6%;bottom:10%;width:0;max-width:42%;overflow:hidden;padding:0 0 5px;border-bottom:1px solid var(--bf-leather);color:#b8798a;font-family:"Cormorant Garamond",Georgia,serif;font-size:11px;font-size:2.2cqw;font-style:italic;font-weight:600;line-height:1;letter-spacing:.05em;white-space:nowrap;animation:av-benjamin-write 7.5s steps(24,end) infinite}
+.av-sig-benjamin__books{z-index:8;left:6%;bottom:8%;height:30px;gap:5px;opacity:.85}
+.av-sig-benjamin__books i{width:6px;height:24px;border:0;background:var(--bf-leather);animation:av-benjamin-spines 4.8s ease-in-out infinite}
+.av-sig-benjamin__books i:nth-child(2){height:18px;background:var(--bf-wine);animation-delay:.5s}.av-sig-benjamin__books i:nth-child(3){height:28px;background:var(--bf-smoke);animation-delay:1s}
+.av-sig-benjamin__axis{z-index:8;left:auto;right:5%;top:9%;width:1px;height:78%;background:linear-gradient(transparent,var(--bf-leather),transparent);transform:none;opacity:.48}
+.av-sig-benjamin__axis:after{content:"";position:absolute;left:-3px;top:5%;width:7px;height:7px;border-radius:50%;background:var(--bf-leather);box-shadow:0 0 9px rgba(192,131,79,.62);animation:av-benjamin-cursor 5.6s ease-in-out infinite}
+@keyframes av-benjamin-cinema-light{0%,14%,100%{transform:translateX(-42%) rotate(-5deg);opacity:0}27%{opacity:1}66%{transform:translateX(42%) rotate(-5deg);opacity:.78}80%{opacity:0}}@keyframes av-benjamin-write{0%,16%{width:0}48%,78%{width:42%}92%,100%{width:0}}@keyframes av-benjamin-spines{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}@keyframes av-benjamin-cursor{0%,100%{top:5%;opacity:.35}50%{top:88%;opacity:1}}
+@media(prefers-reduced-motion:reduce){.av-sig-benjamin__photo:before,.av-sig-benjamin__motto,.av-sig-benjamin__books i,.av-sig-benjamin__axis:after{animation:none!important}.av-sig-benjamin__motto{width:42%!important}}
+
