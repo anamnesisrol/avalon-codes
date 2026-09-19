@@ -1,31 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&family=Elsie+Swash+Caps:wght@400;900&family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap");
+
 /* =========================================================
    ONCE UPON A DREAM — OUAD
-   Repositorio de estilos del foro
+   SISTEMA DE TABLILLAS
    ========================================================= */
 
-/*
-   SISTEMA DE TABLILLAS
+:root{
+  --ouad-bg-deep:#060d13;
+  --ouad-bg-main:#0b1c28;
+  --ouad-bg-panel:#102536;
+  --ouad-bg-soft:#18374d;
+  --ouad-bg-blue:#1a4054;
+  --ouad-gold:#b99a3d;
+  --ouad-gold-soft:#d1bb72;
+  --ouad-blue:#66a1bf;
+  --ouad-blue-soft:#91bbce;
+  --ouad-text:#e8e1df;
+  --ouad-text-soft:#9fb1bd;
+  --ouad-line:rgba(145,187,206,.22);
+  --ouad-line-gold:rgba(185,154,61,.42);
+  --ouad-title:"Elsie Swash Caps",serif;
+  --ouad-accent:"Della Respira",serif;
+  --ouad-body:"Red Hat Display",sans-serif;
+}
 
-   Dirección visual:
-   - Navy / negro
-   - Dorado: #b99a3d
-   - Azules secundarios
-   - Elsie Swash Caps / Della Respira / Red Hat Display
-   - Bordes rectos
-   - Composición editorial
+/* =========================================================
+   BASE
+   ========================================================= */
 
-   Reglas base:
-   - Sin scroll interno
-   - Altura automática según el contenido
-   - Responsive
-   - HTML y CSS separados
-   - Clases aisladas con prefijo ouad-
+.ouad-tpl,
+.ouad-tpl *{
+  box-sizing:border-box;
+}
 
-   Familias previstas:
-   01. Administrativa / general
-   02. Registro
-   03. Cronología / línea temporal
-   04. Narrativa / post
-*/
+.ouad-tpl{
+  position:relative;
+  width:min(720px,100%);
+  max-width:100%;
+  height:auto;
+  margin:28px auto;
+  color:var(--ouad-text);
+  font-family:var(--ouad-body);
+  background:
+    linear-gradient(145deg,rgba(24,55,77,.34),rgba(6,13,19,.97) 42%,rgba(11,28,40,.98));
+  border:1px solid var(--ouad-line-gold);
+  box-shadow:
+    0 20px 48px rgba(0,0,0,.28),
+    inset 0 0 0 1px rgba(255,255,255,.018);
+}
 
-/* Las tablillas se añadirán debajo de este punto. */
+.ouad-tpl::before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  pointer-events:none;
+  border:1px solid rgba(145,187,206,.11);
+}
+
+.ouad-tpl__head{
+  position:relative;
+  min-height:120px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 92px;
+  align-items:stretch;
+  overflow:hidden;
+  border-bottom:1px solid var(--ouad-line-gold);
+  background:
+    linear-gradient(135deg,rgba(6,13,19,.28),rgba(24,55,77,.74)),
+    repeating-linear-gradient(45deg,rgba(185,154,61,.08) 0 26px,transparent 26px 50px),
+    repeating-linear-gradient(-45deg,rgba(102,161,191,.07) 0 26px,transparent 26px 50px),
+    var(--ouad-bg-panel);
+}
+
+.ouad-tpl__head::after{
+  content:"";
+  position:absolute;
+  left:28px;
+  bottom:0;
+  width:82px;
+  height:2px;
+  background:var(--ouad-gold);
+}
+
+.ouad-tpl__head-main{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  min-width:0;
+  padding:24px 28px;
+}
+
+.ouad-tpl__kicker{
+  color:var(--ouad-gold);
+  font-size:8px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+.ouad-tpl__title{
+  margin:0;
+  color:var(--ouad-text);
+  font-family:var(--ouad-title);
+  font-size:clamp(26px,5vw,42px);
+  font-weight:400;
+  line-height:1;
+}
+
+.ouad-tpl__subtitle{
+  color:var(--ouad-blue-soft);
+  font-family:var(--ouad-accent);
+  font-size:11px;
+  line-height:1.45;
+}
+
+.ouad-tpl__icon{
+  position:relative;
+  z-index:2;
+  display:grid;
+  place-items:center;
+  color:var(--ouad-gold-soft);
+  border-left:1px solid var(--ouad-line-gold);
+  background:rgba(6,13,19,.38);
+}
+
+.ouad-tpl__icon .material-symbols-outlined{
+  font-size:31px;
+  font-variation-settings:"wght" 300,"GRAD" 0,"opsz" 32;
+}
+
+.ouad-tpl__body{
+  position:relative;
+  z-index:1;
+  padding:32px;
+  color:var(--ouad-text);
+  font-size:13px;
+  line-height:1.78;
+}
+
+.ouad-tpl__body p{
+  margin:0 0 18px;
+}
+
+.ouad-tpl__body p:last-child{
+  margin-bottom:0;
+}
+
+.ouad-tpl__section{
+  margin:0 0 22px;
+}
+
+.ouad-tpl__section:last-child{
+  margin-bottom:0;
+}
+
+.ouad-tpl__section-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 13px;
+  padding:9px 12px;
+  color:var(--ouad-gold-soft);
+  font-family:var(--ouad-accent);
+  font-size:14px;
+  line-height:1.2;
+  border-left:3px solid var(--ouad-gold);
+  border-bottom:1px solid var(--ouad-line);
+  background:linear-gradient(90deg,rgba(24,55,77,.62),rgba(6,13,19,.18));
+}
+
+.ouad-tpl__section-head .material-symbols-outlined{
+  color:var(--ouad-blue-soft);
+  font-size:18px;
+}
+
+.ouad-tpl__footer{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:13px 20px;
+  color:var(--ouad-text-soft);
+  font-size:8px;
+  font-weight:800;
+  line-height:1.4;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  border-top:1px solid var(--ouad-line-gold);
+  background:
+    linear-gradient(90deg,rgba(24,55,77,.54),rgba(6,13,19,.92));
+}
+
+.ouad-tpl__footer strong{
+  color:var(--ouad-gold-soft);
+  font-weight:900;
+}
+
+.ouad-tpl__rule{
+  height:1px;
+  margin:22px 0;
+  background:linear-gradient(90deg,transparent,var(--ouad-line-gold),transparent);
+}
+
+.ouad-tpl__note{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:18px 0 0;
+  padding:12px 14px;
+  color:var(--ouad-text-soft);
+  font-size:11px;
+  line-height:1.55;
+  border:1px solid var(--ouad-line);
+  background:rgba(24,55,77,.22);
+}
+
+.ouad-tpl__note .material-symbols-outlined{
+  flex:0 0 auto;
+  color:var(--ouad-gold);
+  font-size:18px;
+}
+
+/* =========================================================
+   01 — ADMINISTRATIVA / GENERAL
+   ========================================================= */
+
+.ouad-admin .ouad-tpl__body{
+  padding-top:28px;
+}
+
+.ouad-admin__index{
+  display:grid;
+  grid-template-columns:54px minmax(0,1fr);
+  gap:14px;
+  align-items:start;
+  margin:0 0 22px;
+}
+
+.ouad-admin__index:last-child{
+  margin-bottom:0;
+}
+
+.ouad-admin__number{
+  display:grid;
+  place-items:center;
+  min-height:54px;
+  color:var(--ouad-gold-soft);
+  font-family:var(--ouad-accent);
+  font-size:17px;
+  border:1px solid var(--ouad-line-gold);
+  background:rgba(6,13,19,.42);
+}
+
+.ouad-admin__content{
+  min-width:0;
+}
+
+.ouad-admin__content h3{
+  margin:0 0 7px;
+  color:var(--ouad-text);
+  font-family:var(--ouad-accent);
+  font-size:16px;
+  font-weight:400;
+  line-height:1.25;
+}
+
+.ouad-admin__content p{
+  color:var(--ouad-text-soft);
+  font-size:12px;
+  line-height:1.7;
+}
+
+/* =========================================================
+   02 — REGISTRO
+   Sin scroll: todos los grupos crecen con su contenido
+   ========================================================= */
+
+.ouad-registry .ouad-tpl__body{
+  padding:24px;
+}
+
+.ouad-registry__intro{
+  margin:0 0 18px;
+  padding:14px 16px;
+  color:var(--ouad-text-soft);
+  font-size:11px;
+  line-height:1.65;
+  border:1px solid var(--ouad-line);
+  background:rgba(24,55,77,.20);
+}
+
+.ouad-registry__grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+
+.ouad-registry__group{
+  min-width:0;
+  border:1px solid var(--ouad-line);
+  background:rgba(6,13,19,.40);
+}
+
+.ouad-registry__group--wide{
+  grid-column:1/-1;
+}
+
+.ouad-registry__group-title{
+  padding:9px 12px;
+  color:var(--ouad-text);
+  font-family:var(--ouad-title);
+  font-size:18px;
+  line-height:1;
+  text-align:center;
+  border-bottom:1px solid var(--ouad-line-gold);
+  background:linear-gradient(90deg,rgba(24,55,77,.84),rgba(16,37,54,.94));
+}
+
+.ouad-registry__list{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin:0;
+  padding:10px;
+  list-style:none;
+}
+
+.ouad-registry__item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  min-width:0;
+  padding:9px 10px;
+  border:1px solid rgba(145,187,206,.13);
+  background:rgba(16,37,54,.52);
+}
+
+.ouad-registry__item-name{
+  min-width:0;
+  color:var(--ouad-text);
+  font-size:10px;
+  font-weight:800;
+  line-height:1.35;
+  letter-spacing:.04em;
+}
+
+.ouad-registry__item-user{
+  flex:0 0 auto;
+  color:var(--ouad-blue-soft);
+  font-size:9px;
+  font-weight:700;
+  line-height:1.35;
+  text-align:right;
+}
+
+.ouad-registry__item a{
+  color:inherit!important;
+  text-decoration:none!important;
+}
+
+.ouad-registry__item a:hover{
+  color:var(--ouad-gold-soft)!important;
+}
+
+/* =========================================================
+   03 — CRONOLOGÍA / LÍNEA TEMPORAL
+   ========================================================= */
+
+.ouad-timeline .ouad-tpl__body{
+  padding:28px;
+}
+
+.ouad-timeline__list{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.ouad-timeline__list::before{
+  content:"";
+  position:absolute;
+  top:8px;
+  bottom:8px;
+  left:101px;
+  width:1px;
+  background:linear-gradient(var(--ouad-gold),rgba(185,154,61,.18));
+}
+
+.ouad-timeline__event{
+  position:relative;
+  display:grid;
+  grid-template-columns:82px minmax(0,1fr);
+  gap:38px;
+  align-items:start;
+}
+
+.ouad-timeline__event::before{
+  content:"";
+  position:absolute;
+  top:24px;
+  left:95px;
+  width:11px;
+  height:11px;
+  border:2px solid var(--ouad-gold);
+  background:var(--ouad-bg-main);
+  transform:rotate(45deg);
+}
+
+.ouad-timeline__date{
+  padding:10px 8px;
+  color:var(--ouad-gold-soft);
+  font-family:var(--ouad-accent);
+  font-size:11px;
+  line-height:1.35;
+  text-align:center;
+  border:1px solid var(--ouad-line-gold);
+  background:rgba(6,13,19,.46);
+}
+
+.ouad-timeline__card{
+  min-width:0;
+  padding:14px 16px;
+  border:1px solid var(--ouad-line);
+  background:linear-gradient(135deg,rgba(24,55,77,.40),rgba(6,13,19,.42));
+}
+
+.ouad-timeline__card h3{
+  margin:0 0 6px;
+  color:var(--ouad-text);
+  font-family:var(--ouad-accent);
+  font-size:15px;
+  font-weight:400;
+  line-height:1.25;
+}
+
+.ouad-timeline__card p{
+  margin:0;
+  color:var(--ouad-text-soft);
+  font-size:11px;
+  line-height:1.65;
+}
+
+/* =========================================================
+   04 — NARRATIVA / POST
+   ========================================================= */
+
+.ouad-narrative{
+  --ouad-cover:none;
+}
+
+.ouad-narrative .ouad-tpl__head{
+  min-height:145px;
+  background:
+    linear-gradient(90deg,rgba(6,13,19,.84),rgba(6,13,19,.30),rgba(6,13,19,.82)),
+    var(--ouad-cover) center/cover no-repeat,
+    linear-gradient(135deg,var(--ouad-bg-panel),var(--ouad-bg-soft));
+}
+
+.ouad-narrative .ouad-tpl__head-main{
+  padding:30px 32px;
+}
+
+.ouad-narrative .ouad-tpl__body{
+  padding:38px 44px;
+  font-size:13px;
+  line-height:1.9;
+}
+
+.ouad-narrative__meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 14px;
+  margin:0 0 24px;
+  padding:10px 12px;
+  color:var(--ouad-text-soft);
+  font-size:8px;
+  font-weight:900;
+  line-height:1.4;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  border-top:1px solid var(--ouad-line);
+  border-bottom:1px solid var(--ouad-line);
+}
+
+.ouad-narrative__meta strong{
+  color:var(--ouad-gold-soft);
+}
+
+.ouad-narrative__quote{
+  margin:24px 0;
+  padding:15px 18px;
+  color:var(--ouad-blue-soft);
+  font-family:var(--ouad-accent);
+  font-size:14px;
+  line-height:1.65;
+  border-left:3px solid var(--ouad-gold);
+  background:rgba(24,55,77,.18);
+}
+
+.ouad-narrative__dropcap::first-letter{
+  float:left;
+  margin:5px 8px 0 0;
+  color:var(--ouad-gold-soft);
+  font-family:var(--ouad-title);
+  font-size:48px;
+  line-height:.78;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:760px){
+  .ouad-tpl{
+    width:100%;
+    margin:18px auto;
+  }
+
+  .ouad-tpl__head{
+    grid-template-columns:minmax(0,1fr) 72px;
+    min-height:104px;
+  }
+
+  .ouad-tpl__head-main{
+    padding:20px;
+  }
+
+  .ouad-tpl__body{
+    padding:24px 20px;
+  }
+
+  .ouad-registry__grid{
+    grid-template-columns:1fr;
+  }
+
+  .ouad-registry__group--wide{
+    grid-column:auto;
+  }
+
+  .ouad-narrative .ouad-tpl__body{
+    padding:30px 24px;
+  }
+}
+
+@media(max-width:560px){
+  .ouad-tpl__head{
+    grid-template-columns:1fr;
+  }
+
+  .ouad-tpl__icon{
+    display:none;
+  }
+
+  .ouad-tpl__footer{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .ouad-admin__index{
+    grid-template-columns:42px minmax(0,1fr);
+    gap:10px;
+  }
+
+  .ouad-admin__number{
+    min-height:42px;
+    font-size:14px;
+  }
+
+  .ouad-registry__item{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:3px;
+  }
+
+  .ouad-registry__item-user{
+    text-align:left;
+  }
+
+  .ouad-timeline__list::before{
+    left:14px;
+  }
+
+  .ouad-timeline__event{
+    grid-template-columns:1fr;
+    gap:8px;
+    padding-left:34px;
+  }
+
+  .ouad-timeline__event::before{
+    top:15px;
+    left:8px;
+  }
+
+  .ouad-timeline__date{
+    width:max-content;
+    max-width:100%;
+    text-align:left;
+  }
+
+  .ouad-narrative .ouad-tpl__body{
+    padding:26px 20px;
+  }
+}
