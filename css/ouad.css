@@ -1,0 +1,31 @@
+/* =========================================================
+   ONCE UPON A DREAM — OUAD
+   Repositorio de estilos del foro
+   ========================================================= */
+
+/*
+   SISTEMA DE TABLILLAS
+
+   Dirección visual:
+   - Navy / negro
+   - Dorado: #b99a3d
+   - Azules secundarios
+   - Elsie Swash Caps / Della Respira / Red Hat Display
+   - Bordes rectos
+   - Composición editorial
+
+   Reglas base:
+   - Sin scroll interno
+   - Altura automática según el contenido
+   - Responsive
+   - HTML y CSS separados
+   - Clases aisladas con prefijo ouad-
+
+   Familias previstas:
+   01. Administrativa / general
+   02. Registro
+   03. Cronología / línea temporal
+   04. Narrativa / post
+*/
+
+/* Las tablillas se añadirán debajo de este punto. */
