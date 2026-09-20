@@ -515,6 +515,77 @@
   line-height:.78;
 }
 
+
+/* =========================================================
+   05 — ADMINISTRATIVA SIMPLE
+   ========================================================= */
+
+.ouad-admin-simple .ouad-tpl__head{
+  min-height:132px;
+}
+
+.ouad-admin-simple .ouad-tpl__body{
+  padding:38px 44px;
+  font-size:13px;
+  line-height:1.82;
+}
+
+.ouad-admin-simple__intro{
+  margin:0 0 28px;
+  color:var(--ouad-text);
+  font-size:13px;
+  line-height:1.82;
+}
+
+.ouad-admin-simple__section{
+  margin:28px 0 0;
+}
+
+.ouad-admin-simple__section-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0 0 14px;
+  color:var(--ouad-gold-soft);
+  font-family:var(--ouad-accent);
+  font-size:13px;
+  font-weight:400;
+  line-height:1.25;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.ouad-admin-simple__section-title::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:linear-gradient(90deg,var(--ouad-gold),rgba(185,154,61,.10));
+}
+
+.ouad-admin-simple__section-content{
+  color:var(--ouad-text-soft);
+  font-size:12px;
+  line-height:1.78;
+}
+
+.ouad-admin-simple__section-content p{
+  margin:0 0 16px;
+}
+
+.ouad-admin-simple__section-content p:last-child{
+  margin-bottom:0;
+}
+
+.ouad-admin-simple__note{
+  margin:26px 0 0;
+  padding:13px 15px;
+  color:var(--ouad-blue-soft);
+  font-size:11px;
+  line-height:1.6;
+  border-left:3px solid var(--ouad-gold);
+  background:rgba(24,55,77,.18);
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
