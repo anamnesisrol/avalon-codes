@@ -366,9 +366,6 @@
   text-decoration:none!important;
 }
 
-.ouad-registry__item a:hover{
-  color:var(--ouad-gold-soft)!important;
-}
 
 /* =========================================================
    03 — CRONOLOGÍA / LÍNEA TEMPORAL
@@ -681,3 +678,58 @@
     padding:26px 20px;
   }
 }
+
+
+/* =========================================================
+   06 — NARRATIVA SIMPLE / SIN TÍTULO
+   ========================================================= */
+
+.ouad-story .ouad-tpl__head{min-height:118px;grid-template-columns:1fr;}
+.ouad-story .ouad-tpl__head-main,.ouad-story .ouad-tpl__icon{display:none;}
+.ouad-story .ouad-tpl__body{padding:38px 44px;font-size:13px;line-height:1.9;}
+.ouad-story__quote{margin:24px 0;padding:15px 18px;color:var(--ouad-blue-soft);font-family:var(--ouad-accent);font-size:14px;line-height:1.65;border-left:3px solid var(--ouad-gold);background:rgba(24,55,77,.18);}
+.ouad-story__dropcap::first-letter{float:left;margin:5px 8px 0 0;color:var(--ouad-gold-soft);font-family:var(--ouad-title);font-size:48px;line-height:.78;}
+.ouad-story__footer{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 20px;border-top:1px solid var(--ouad-line-gold);background:linear-gradient(90deg,rgba(24,55,77,.54),rgba(6,13,19,.92));}
+.ouad-story__meta{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--ouad-text-soft);font-size:8px;font-weight:900;line-height:1.4;letter-spacing:.11em;text-transform:uppercase;}
+.ouad-story__meta strong{color:var(--ouad-gold-soft);}
+.ouad-story__brand{flex:0 0 auto;color:var(--ouad-gold-soft);font-size:8px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;}
+
+/* =========================================================
+   07 — NORMATIVA / GUÍAS
+   ========================================================= */
+
+.ouad-rules__intro{padding:32px 36px 28px;border-bottom:1px solid var(--ouad-line-gold);background:linear-gradient(135deg,rgba(24,55,77,.45),rgba(6,13,19,.72));}
+.ouad-rules__intro small{display:block;margin-bottom:7px;color:var(--ouad-gold);font-size:8px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;}
+.ouad-rules__intro h2{margin:0;color:var(--ouad-text);font-family:var(--ouad-title);font-size:36px;font-weight:400;line-height:1;}
+.ouad-rules__intro p{max-width:560px;margin:13px 0 0;color:var(--ouad-text-soft);font-size:11px;line-height:1.65;}
+.ouad-rules__body{position:relative;z-index:1;padding:30px 36px 36px;}
+.ouad-rules__section{margin-top:32px;}
+.ouad-rules__section:first-child{margin-top:0;}
+.ouad-rules__section-title{display:grid;grid-template-columns:46px minmax(0,1fr);align-items:center;gap:14px;margin-bottom:8px;padding-bottom:12px;border-bottom:1px solid var(--ouad-line-gold);}
+.ouad-rules__section-number{color:var(--ouad-gold-soft);font-family:var(--ouad-title);font-size:28px;line-height:1;text-align:center;}
+.ouad-rules__section-title small{display:block;margin-bottom:3px;color:var(--ouad-blue-soft);font-size:7px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;}
+.ouad-rules__section-title h3{margin:0;color:var(--ouad-text);font-family:var(--ouad-accent);font-size:18px;font-weight:400;line-height:1.2;}
+.ouad-rule{display:grid;grid-template-columns:46px minmax(0,1fr);gap:14px;padding:17px 0;border-bottom:1px solid rgba(145,187,206,.13);}
+.ouad-rule:last-child{border-bottom:0;}
+.ouad-rule__number{padding-top:1px;color:var(--ouad-gold);font-family:var(--ouad-accent);font-size:14px;line-height:1.4;text-align:center;}
+.ouad-rule h4{margin:0 0 5px;color:var(--ouad-text);font-size:10px;font-weight:900;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;}
+.ouad-rule p{margin:0;color:var(--ouad-text-soft);font-size:11px;line-height:1.72;}
+
+/* =========================================================
+   08 — DIRECTORIO / LISTADO CON RETRATOS
+   ========================================================= */
+
+.ouad-directory__intro{padding:28px 32px 24px;border-bottom:1px solid var(--ouad-line-gold);background:linear-gradient(135deg,rgba(24,55,77,.42),rgba(6,13,19,.72));}
+.ouad-directory__intro small{display:block;margin-bottom:6px;color:var(--ouad-gold);font-size:8px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;}
+.ouad-directory__intro h2{margin:0;color:var(--ouad-text);font-family:var(--ouad-title);font-size:32px;font-weight:400;line-height:1;}
+.ouad-directory__intro p{margin:11px 0 0;color:var(--ouad-text-soft);font-size:11px;line-height:1.6;}
+.ouad-directory__list{position:relative;z-index:1;padding:18px 32px 24px;}
+.ouad-directory__item{display:grid;grid-template-columns:82px minmax(0,1fr);align-items:center;gap:18px;min-height:104px;padding:11px 8px;border-bottom:1px solid var(--ouad-line);}
+.ouad-directory__item:last-child{border-bottom:0;}
+.ouad-directory__avatar{width:78px;height:78px;padding:4px;border:1px solid var(--ouad-line-gold);border-radius:50%;background:rgba(6,13,19,.68);}
+.ouad-directory__avatar img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;}
+.ouad-directory__info{min-width:0;padding-left:18px;border-left:2px solid var(--ouad-gold);}
+.ouad-directory__info h3{margin:0 0 7px;color:var(--ouad-text);font-family:var(--ouad-accent);font-size:15px;font-weight:400;line-height:1.25;}
+.ouad-directory__info p{margin:0;color:var(--ouad-text-soft);font-size:10px;line-height:1.55;}
+.ouad-directory__info b{color:var(--ouad-blue-soft);font-weight:800;}
+.ouad-directory__info a{color:inherit!important;text-decoration:none!important;}
