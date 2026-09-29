@@ -764,3 +764,30 @@
 .ouat-role-data span{display:block;}
 .ouat-role-data b{color:var(--ouad-gold-soft);font-weight:900;}
 
+/* =========================================================
+   10 — ADMINISTRATIVA / BLOQUES DE REGLAS
+   HTML definitivo: .ouat-admin-rules
+   ========================================================= */
+
+.ouat-admin-rules,.ouat-admin-rules *{box-sizing:border-box;}
+.ouat-admin-rules{position:relative;width:720px;margin:28px auto;color:var(--ouad-text);font-family:var(--ouad-body);background:linear-gradient(145deg,rgba(24,55,77,.30),rgba(6,13,19,.98) 42%,rgba(11,28,40,.98));border:1px solid var(--ouad-line-gold);box-shadow:0 20px 48px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.018);}
+.ouat-admin-rules::before{content:"";position:absolute;inset:8px;pointer-events:none;border:1px solid rgba(145,187,206,.11);}
+.ouat-admin-rules-head{position:relative;z-index:1;padding:32px 38px 27px;border-bottom:1px solid var(--ouad-line-gold);background:linear-gradient(135deg,rgba(24,55,77,.58),rgba(6,13,19,.76));}
+.ouat-admin-rules-kicker{display:block;margin-bottom:7px;color:var(--ouad-gold);font-size:8px;font-weight:900;line-height:1;letter-spacing:.22em;text-transform:uppercase;}
+.ouat-admin-rules-title{display:block;color:var(--ouad-text);font-family:var(--ouad-title);font-size:36px;font-weight:400;line-height:1.05;}
+.ouat-admin-rules-intro{display:block;max-width:590px;margin-top:13px;color:var(--ouad-text-soft);font-size:11px;line-height:1.7;}
+.ouat-admin-rules-body{position:relative;z-index:1;padding:30px 38px 36px;}
+.ouat-admin-rules-section{margin:0 0 30px;}
+.ouat-admin-rules-section:last-child{margin-bottom:0;}
+.ouat-admin-rules-section-head{display:flex;align-items:center;gap:12px;margin:0 0 13px;padding:0 0 10px;border-bottom:1px solid var(--ouad-line-gold);}
+.ouat-admin-rules-section-number{flex:0 0 auto;color:var(--ouad-gold-soft);font-family:var(--ouad-title);font-size:25px;line-height:1;}
+.ouat-admin-rules-section-name{display:block;color:var(--ouad-blue-soft);font-family:var(--ouad-accent);font-size:14px;line-height:1.25;}
+.ouat-admin-rule{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;margin:0 0 9px;padding:14px 16px;border:1px solid rgba(145,187,206,.15);background:linear-gradient(90deg,rgba(16,37,54,.68),rgba(6,13,19,.38));}
+.ouat-admin-rule:last-child{margin-bottom:0;}
+.ouat-admin-rule-number{display:flex;align-items:flex-start;justify-content:center;padding-top:1px;color:var(--ouad-gold);font-family:var(--ouad-accent);font-size:13px;line-height:1.4;border-right:1px solid var(--ouad-line-gold);}
+.ouat-admin-rule-content{display:block;min-width:0;padding-left:2px;}
+.ouat-admin-rule-title{display:block;margin-bottom:5px;color:var(--ouad-text);font-size:10px;font-weight:900;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;}
+.ouat-admin-rule-text{display:block;color:var(--ouad-text-soft);font-size:11px;font-weight:500;line-height:1.72;}
+.ouat-admin-rules-foot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 20px;color:var(--ouad-text-soft);font-size:8px;font-weight:800;line-height:1.4;letter-spacing:.16em;text-transform:uppercase;border-top:1px solid var(--ouad-line-gold);background:linear-gradient(90deg,rgba(24,55,77,.54),rgba(6,13,19,.92));}
+.ouat-admin-rules-foot b{color:var(--ouad-gold-soft);font-weight:900;}
+
