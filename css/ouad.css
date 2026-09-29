@@ -791,3 +791,21 @@
 .ouat-admin-rules-foot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 20px;color:var(--ouad-text-soft);font-size:8px;font-weight:800;line-height:1.4;letter-spacing:.16em;text-transform:uppercase;border-top:1px solid var(--ouad-line-gold);background:linear-gradient(90deg,rgba(24,55,77,.54),rgba(6,13,19,.92));}
 .ouat-admin-rules-foot b{color:var(--ouad-gold-soft);font-weight:900;}
 
+/* =========================================================
+   11 — DIRECTORIO COMPACTO / RETRATOS
+   HTML definitivo: .ouat-cast
+   ========================================================= */
+
+.ouat-cast,.ouat-cast *{box-sizing:border-box;}
+.ouat-cast{position:relative;width:620px;margin:28px auto;padding:14px;color:var(--ouad-text);font-family:var(--ouad-body);background:linear-gradient(145deg,rgba(24,55,77,.30),rgba(6,13,19,.98) 44%,rgba(11,28,40,.98));border:1px solid var(--ouad-line-gold);box-shadow:0 20px 48px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.018);}
+.ouat-cast::before{content:"";position:absolute;inset:7px;pointer-events:none;border:1px solid rgba(145,187,206,.11);}
+.ouat-cast-list{position:relative;z-index:1;padding:8px 18px 10px 30px;border-left:5px solid var(--ouad-gold);background:rgba(16,37,54,.42);}
+.ouat-cast-item{display:grid;grid-template-columns:84px minmax(0,1fr);align-items:center;gap:18px;min-height:104px;padding:10px 0;border-bottom:1px solid var(--ouad-line);}
+.ouat-cast-item:last-child{border-bottom:0;}
+.ouat-cast-avatar{position:relative;width:78px;height:78px;padding:3px;border:1px solid var(--ouad-line-gold);border-radius:50%;background:var(--ouad-bg-deep);}
+.ouat-cast-avatar img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;}
+.ouat-cast-info{min-width:0;padding:13px 18px;border-left:1px solid var(--ouad-line-gold);background:rgba(6,13,19,.48);}
+.ouat-cast-name{display:block;margin-bottom:5px;color:var(--ouad-text);font-size:11px;font-weight:900;line-height:1.35;letter-spacing:.07em;text-transform:uppercase;}
+.ouat-cast-detail{display:block;color:var(--ouad-text-soft);font-family:var(--ouad-accent);font-size:11px;line-height:1.5;}
+.ouat-cast-detail b{color:var(--ouad-blue-soft);font-weight:400;}
+
