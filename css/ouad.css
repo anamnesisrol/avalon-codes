@@ -718,3 +718,18 @@
 .ouat-cast-detail{display:block;color:var(--ouad-text-soft);font-family:var(--ouad-accent);font-size:11px;line-height:1.5;}
 .ouat-cast-detail b{color:var(--ouad-blue-soft);font-weight:400;}
 
+/* =========================================================
+   12 — ESTADO ADMINISTRATIVO / ACEPTADO Y ACTUALIZADO
+   HTML definitivo: .ouat-status
+   ========================================================= */
+
+.ouat-status,.ouat-status *{box-sizing:border-box;}
+.ouat-status{position:relative;width:520px;margin:28px auto;padding:10px;color:var(--ouad-text);font-family:var(--ouad-body);background:linear-gradient(145deg,rgba(24,55,77,.30),rgba(6,13,19,.98) 48%,rgba(11,28,40,.98));border:1px solid var(--ouad-line-gold);box-shadow:0 16px 36px rgba(0,0,0,.25),inset 0 0 0 1px rgba(255,255,255,.018);}
+.ouat-status::before{content:"";position:absolute;inset:6px;pointer-events:none;border:1px solid rgba(145,187,206,.11);}
+.ouat-status-inner{position:relative;z-index:1;display:grid;grid-template-columns:58px minmax(0,1fr);align-items:center;min-height:82px;border:1px solid var(--ouad-line);background:rgba(16,37,54,.40);}
+.ouat-status-mark{display:flex;align-items:center;justify-content:center;align-self:stretch;color:var(--ouad-gold-soft);font-family:var(--ouad-title);font-size:28px;line-height:1;border-right:1px solid var(--ouad-line-gold);background:rgba(6,13,19,.40);}
+.ouat-status-copy{display:block;padding:16px 20px;}
+.ouat-status-label{display:block;margin-bottom:4px;color:var(--ouad-gold);font-size:7px;font-weight:900;line-height:1;letter-spacing:.2em;text-transform:uppercase;}
+.ouat-status-title{display:block;color:var(--ouad-text);font-family:var(--ouad-accent);font-size:18px;line-height:1.25;}
+.ouat-status-note{display:block;margin-top:5px;color:var(--ouad-text-soft);font-size:9px;font-weight:600;line-height:1.5;}
+
