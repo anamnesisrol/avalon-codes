@@ -748,3 +748,19 @@
 .ouat-directory-info a{color:inherit!important;text-decoration:none!important;}
 .ouat-directory-foot{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 20px;color:var(--ouad-text-soft);font-size:8px;font-weight:800;line-height:1.4;letter-spacing:.16em;text-transform:uppercase;border-top:1px solid var(--ouad-line-gold);background:linear-gradient(90deg,rgba(24,55,77,.54),rgba(6,13,19,.92));}
 .ouat-directory-foot b{color:var(--ouad-gold-soft);}
+
+/* =========================================================
+   09 — ROL SIMPLE / SIN ENCABEZADO
+   HTML definitivo: .ouat-role
+   ========================================================= */
+
+.ouat-role,.ouat-role *{box-sizing:border-box;}
+.ouat-role{position:relative;width:720px;margin:28px auto;color:var(--ouad-text);font-family:var(--ouad-body);background:linear-gradient(145deg,rgba(24,55,77,.28),rgba(6,13,19,.98) 44%,rgba(11,28,40,.98));border:1px solid var(--ouad-line-gold);box-shadow:0 20px 48px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.018);}
+.ouat-role::before{content:"";position:absolute;inset:8px;pointer-events:none;border:1px solid rgba(145,187,206,.11);}
+.ouat-role-text{position:relative;z-index:1;padding:46px 48px 40px;color:var(--ouad-text);font-size:13px;line-height:1.9;text-align:justify;}
+.ouat-role-text br{line-height:1.9;}
+.ouat-role-quote{display:block;margin:24px 0;padding:14px 18px;color:var(--ouad-blue-soft);font-family:var(--ouad-accent);font-size:14px;line-height:1.65;border-left:3px solid var(--ouad-gold);background:rgba(24,55,77,.18);}
+.ouat-role-data{position:relative;z-index:1;display:flex;align-items:center;justify-content:flex-end;gap:22px;padding:13px 22px;color:var(--ouad-text-soft);font-size:8px;font-weight:800;line-height:1.4;letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--ouad-line-gold);background:linear-gradient(90deg,rgba(24,55,77,.48),rgba(6,13,19,.94));}
+.ouat-role-data span{display:block;}
+.ouat-role-data b{color:var(--ouad-gold-soft);font-weight:900;}
+
