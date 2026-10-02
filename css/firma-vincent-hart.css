@@ -1,85 +1,13 @@
 /* ==========================================================
    VINCENT HART — firma arquitectónica
-   Nueva firma independiente. No reemplaza estilos anteriores.
-   Namespace: .vh-archsig
+   Firma independiente. Namespace: .vh-archsig
    ========================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap');
-.vh-archsig{
-  --vh-ink:#172536;
-  --vh-steel:#344a62;
-  --vh-red:#9a4638;
-  --vh-burg:#672f32;
-  --vh-char:#202124;
-  --vh-gold:#b79a61;
-  --vh-pale:#d7dce2;
-  position:relative;
-  width:560px;
-  height:255px;
-  margin:0 auto;
-  background:transparent;
-  isolation:isolate;
-  overflow:visible;
-}
-.vh-archsig *, .vh-archsig *::before, .vh-archsig *::after{box-sizing:border-box}
-
-/* architectural traces */
-.vh-archsig__trace{position:absolute;display:block;pointer-events:none;z-index:1;opacity:.9}
-.vh-archsig__trace--h1{left:16px;top:46px;width:515px;height:1px;background:linear-gradient(90deg,transparent 0 2%,var(--vh-steel) 2% 47%,var(--vh-gold) 47% 48%,var(--vh-steel) 48% 78%,var(--vh-red) 78% 87%,transparent 87%)}
-.vh-archsig__trace--h2{left:28px;top:210px;width:500px;height:1px;background:linear-gradient(90deg,var(--vh-red) 0 18%,transparent 18% 22%,var(--vh-steel) 22% 77%,var(--vh-gold) 77% 78%,var(--vh-steel) 78% 100%)}
-.vh-archsig__trace--h3{left:108px;top:114px;width:410px;height:1px;background:linear-gradient(90deg,transparent 0 7%,rgba(52,74,98,.6) 7% 62%,rgba(183,154,97,.75) 62% 63%,transparent 63% 69%,rgba(154,70,56,.7) 69% 100%)}
-.vh-archsig__trace--v1{left:47px;top:23px;width:1px;height:206px;background:linear-gradient(180deg,transparent,var(--vh-steel) 18%,var(--vh-steel) 74%,transparent)}
-.vh-archsig__trace--v2{left:247px;top:16px;width:1px;height:222px;background:linear-gradient(180deg,transparent,var(--vh-gold) 14%,rgba(183,154,97,.75) 81%,transparent)}
-.vh-archsig__trace--v3{right:31px;top:32px;width:1px;height:192px;background:linear-gradient(180deg,transparent,var(--vh-red) 20%,var(--vh-red) 74%,transparent)}
-.vh-archsig__trace--tick{left:225px;top:35px;width:48px;height:22px;border-top:1px solid rgba(52,74,98,.7);border-right:1px solid rgba(52,74,98,.7)}
-.vh-archsig__trace--tick::before{content:"";position:absolute;right:-4px;top:-4px;width:7px;height:7px;border:1px solid var(--vh-gold);transform:rotate(45deg);background:transparent}
-
-/* media */
-.vh-archsig__media{position:absolute;overflow:hidden;z-index:2;background:#1d2a39;box-shadow:0 7px 16px rgba(0,0,0,.18)}
-.vh-archsig__media::before{content:"";position:absolute;z-index:3;inset:0;background:linear-gradient(145deg,rgba(23,37,54,.30),rgba(52,74,98,.22) 54%,rgba(32,33,36,.12));mix-blend-mode:color;pointer-events:none}
-.vh-archsig__media::after{content:"";position:absolute;z-index:4;inset:0;border:1px solid rgba(215,220,226,.68);box-shadow:inset 0 0 0 5px rgba(23,37,54,.06);pointer-events:none}
-.vh-archsig__media img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.58) contrast(1.08) brightness(.95);transform:scale(1.01)}
-.vh-archsig__media--gif{left:62px;top:66px;width:150px;height:142px;transform:rotate(-.35deg)}
-.vh-archsig__media--gif img{object-position:50% 34%;filter:saturate(.52) contrast(1.10) brightness(.94)}
-.vh-archsig__media--still{right:53px;top:27px;width:202px;height:206px;transform:rotate(.25deg)}
-.vh-archsig__media--still img{object-position:49% 34%}
-.vh-archsig__media--gif .vh-archsig__corner,
-.vh-archsig__media--still .vh-archsig__corner{position:absolute;z-index:5;width:18px;height:18px;pointer-events:none}
-.vh-archsig__media--gif .vh-archsig__corner{left:0;bottom:0;border-left:3px solid var(--vh-red);border-bottom:3px solid var(--vh-red)}
-.vh-archsig__media--still .vh-archsig__corner{right:0;top:0;border-right:3px solid var(--vh-gold);border-top:3px solid var(--vh-gold)}
-
-/* offset construction plates */
-.vh-archsig__plate{position:absolute;z-index:0;pointer-events:none}
-.vh-archsig__plate--left{left:47px;top:56px;width:171px;height:161px;border:1px solid rgba(52,74,98,.56);transform:translate(-5px,5px)}
-.vh-archsig__plate--right{right:41px;top:38px;width:205px;height:199px;border:1px solid rgba(154,70,56,.68);transform:translate(5px,-5px)}
-.vh-archsig__plate--right::before{content:"";position:absolute;left:-10px;top:24px;width:18px;height:58px;background:var(--vh-red);opacity:.86}
-.vh-archsig__plate--left::after{content:"";position:absolute;right:-7px;bottom:18px;width:30px;height:6px;background:var(--vh-gold);opacity:.82}
-
-/* name */
-.vh-archsig__name{position:absolute;left:176px;top:128px;z-index:7;width:270px;pointer-events:none}
-.vh-archsig__vincent{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:68px;line-height:.74;font-weight:600;font-style:italic;letter-spacing:-3.6px;color:var(--vh-red);text-shadow:0 1px 0 rgba(255,255,255,.65),0 2px 4px rgba(0,0,0,.23)}
-.vh-archsig__hart{display:block;margin:10px 0 0 84px;font-family:Montserrat,Arial,sans-serif;font-size:14px;line-height:1;text-transform:uppercase;letter-spacing:9px;font-weight:600;color:#d9dde2;text-shadow:-1px 0 var(--vh-ink),0 1px var(--vh-ink),1px 0 var(--vh-ink),0 -1px var(--vh-ink),0 2px 4px rgba(0,0,0,.34)}
-
-/* text kept in old markup but intentionally hidden in this version */
-.vh-archsig__caption,.vh-archsig__micro--b,.vh-archsig__micro--c{display:none!important}
-
-/* micro label */
-.vh-archsig__micro{position:absolute;z-index:6;font:600 7px/1 Montserrat,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.6px;white-space:nowrap}
-.vh-archsig__micro--a{left:28px;top:34px;color:var(--vh-steel);text-shadow:0 1px rgba(255,255,255,.7)}
-.vh-archsig__micro--a::before{content:"";display:inline-block;width:4px;height:4px;margin-right:6px;vertical-align:1px;background:var(--vh-gold);transform:rotate(45deg)}
-
-/* small galactic polyhedral dice */
-.vh-archsig__dice{position:absolute;left:22px;bottom:13px;z-index:8;width:67px;height:44px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.24))}
-.vh-archsig__die{position:absolute;display:grid;place-items:center;color:#d9c9a1;font:600 6px/1 Montserrat,Arial,sans-serif;background:
- radial-gradient(circle at 28% 26%,rgba(220,226,235,.85) 0 1px,transparent 1.3px),
- radial-gradient(circle at 70% 62%,rgba(183,154,97,.9) 0 1px,transparent 1.4px),
- radial-gradient(circle at 48% 77%,rgba(215,220,226,.7) 0 .8px,transparent 1.2px),
- linear-gradient(145deg,#1a2a40,#334a67 58%,#192536);
- box-shadow:inset 0 0 0 1px rgba(183,154,97,.72),inset 0 0 8px rgba(5,11,20,.48)}
-.vh-archsig__die::after{content:"";position:absolute;inset:4px;border-top:1px solid rgba(183,154,97,.34);transform:rotate(32deg);opacity:.8}
-.vh-archsig__die--20{width:27px;height:29px;left:7px;top:6px;clip-path:polygon(50% 0,94% 25%,86% 78%,50% 100%,12% 78%,5% 26%);transform:rotate(-12deg)}
-.vh-archsig__die--12{width:23px;height:24px;left:29px;top:14px;clip-path:polygon(50% 0,95% 35%,77% 96%,22% 96%,5% 35%);transform:rotate(13deg)}
-.vh-archsig__die--8{width:18px;height:20px;left:47px;top:4px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);transform:rotate(18deg)}
-.vh-archsig__orbit{position:absolute;left:1px;top:2px;width:61px;height:33px;border:1px solid rgba(52,74,98,.48);border-radius:50%;transform:rotate(-16deg)}
-.vh-archsig__orbit::after{content:"";position:absolute;right:4px;top:-2px;width:4px;height:4px;border-radius:50%;background:var(--vh-gold)}
-
-@media(max-width:620px){.vh-archsig{transform:scale(.9);transform-origin:top center;margin-bottom:-26px}}
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600;1,6..96,700&family=League+Spartan:wght@700;800&family=Montserrat:wght@400;500;600&display=swap');
+.vh-archsig{--vh-ink:#172536;--vh-steel:#344a62;--vh-red:#9a4638;--vh-burg:#672f32;--vh-char:#202124;--vh-gold:#b79a61;--vh-pale:#d7dce2;position:relative;width:560px;height:275px;margin:0 auto;background:transparent;isolation:isolate;overflow:visible}.vh-archsig*,.vh-archsig*::before,.vh-archsig*::after{box-sizing:border-box}
+.vh-archsig__trace{position:absolute;display:block;pointer-events:none;z-index:1;opacity:.88}.vh-archsig__trace--h1{left:16px;top:46px;width:515px;height:1px;background:linear-gradient(90deg,transparent 0 2%,var(--vh-steel) 2% 47%,var(--vh-gold) 47% 48%,var(--vh-steel) 48% 78%,var(--vh-red) 78% 87%,transparent 87%)}.vh-archsig__trace--h2{left:28px;top:219px;width:500px;height:1px;background:linear-gradient(90deg,var(--vh-red) 0 18%,transparent 18% 22%,var(--vh-steel) 22% 77%,var(--vh-gold) 77% 78%,var(--vh-steel) 78% 100%)}.vh-archsig__trace--h3{left:108px;top:116px;width:410px;height:1px;background:linear-gradient(90deg,transparent 0 7%,rgba(52,74,98,.58) 7% 62%,rgba(183,154,97,.72) 62% 63%,transparent 63% 69%,rgba(154,70,56,.66) 69% 100%)}.vh-archsig__trace--v1{left:47px;top:23px;width:1px;height:216px;background:linear-gradient(180deg,transparent,var(--vh-steel) 18%,var(--vh-steel) 74%,transparent)}.vh-archsig__trace--v2{left:247px;top:16px;width:1px;height:232px;background:linear-gradient(180deg,transparent,var(--vh-gold) 14%,rgba(183,154,97,.72) 81%,transparent)}.vh-archsig__trace--v3{right:31px;top:32px;width:1px;height:202px;background:linear-gradient(180deg,transparent,var(--vh-red) 20%,var(--vh-red) 74%,transparent)}.vh-archsig__trace--tick{left:225px;top:35px;width:48px;height:22px;border-top:1px solid rgba(52,74,98,.7);border-right:1px solid rgba(52,74,98,.7)}.vh-archsig__trace--tick::before{content:"";position:absolute;right:-4px;top:-4px;width:7px;height:7px;border:1px solid var(--vh-gold);transform:rotate(45deg);background:transparent}
+.vh-archsig__media{position:absolute;overflow:hidden;z-index:2;background:#1d2a39;border:1px solid rgba(215,220,226,.58);box-shadow:inset 0 0 0 5px rgba(23,37,54,.05),0 7px 16px rgba(0,0,0,.18)}.vh-archsig__media::before{content:"";position:absolute;z-index:3;inset:0;background:#31475f;mix-blend-mode:color;opacity:.24;pointer-events:none}.vh-archsig__media::after{content:"";position:absolute;z-index:4;inset:0;background:linear-gradient(145deg,rgba(23,37,54,.15),transparent 46%,rgba(32,33,36,.12));mix-blend-mode:soft-light;pointer-events:none}.vh-archsig__media img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.62) contrast(1.09) brightness(.96) sepia(.04);transform:scale(1.01)}.vh-archsig__media--gif{left:62px;top:66px;width:150px;height:142px;transform:rotate(-.35deg)}.vh-archsig__media--gif img{object-position:50% 34%;filter:saturate(.56) contrast(1.10) brightness(.95) sepia(.04)}.vh-archsig__media--still{right:53px;top:27px;width:202px;height:206px;transform:rotate(.25deg)}.vh-archsig__media--still img{object-position:49% 34%}.vh-archsig__corner{position:absolute;z-index:5;width:18px;height:18px;pointer-events:none}.vh-archsig__media--gif .vh-archsig__corner{left:0;bottom:0;border-left:3px solid var(--vh-red);border-bottom:3px solid var(--vh-red)}.vh-archsig__media--still .vh-archsig__corner{right:0;top:0;border-right:3px solid var(--vh-gold);border-top:3px solid var(--vh-gold)}
+.vh-archsig__plate{position:absolute;z-index:0;pointer-events:none}.vh-archsig__plate--left{left:47px;top:56px;width:171px;height:161px;border:1px solid rgba(52,74,98,.56);transform:translate(-5px,5px)}.vh-archsig__plate--right{right:41px;top:38px;width:205px;height:199px;border:1px solid rgba(154,70,56,.68);transform:translate(5px,-5px)}.vh-archsig__plate--right::before{content:"";position:absolute;left:-10px;top:24px;width:18px;height:58px;background:var(--vh-red);opacity:.84}.vh-archsig__plate--left::after{content:"";position:absolute;right:-7px;bottom:18px;width:30px;height:6px;background:var(--vh-gold);opacity:.82}
+.vh-archsig__name{position:absolute;left:171px;top:147px;z-index:7;width:305px;pointer-events:none}.vh-archsig__vincent{display:block;width:max-content;font-family:"Bodoni Moda",Didot,"Times New Roman",serif;font-size:67px;line-height:.72;font-weight:700;font-style:italic;letter-spacing:-4px;color:var(--vh-burg);background:linear-gradient(118deg,var(--vh-burg) 0%,var(--vh-red) 66%,#b27357 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 rgba(255,255,255,.56)) drop-shadow(0 3px 4px rgba(0,0,0,.18))}.vh-archsig__hart{display:block;width:max-content;margin:9px 0 0 117px;padding:5px 9px 4px 13px;background:var(--vh-ink);border-left:3px solid var(--vh-gold);box-shadow:0 3px 7px rgba(0,0,0,.18);color:#eef1f4;font-family:"League Spartan",Arial,sans-serif;font-size:14px;font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:7px}
+.vh-archsig__quote{position:absolute;z-index:8;left:174px;top:224px;width:322px;padding:5px 9px 6px 11px;border-left:2px solid var(--vh-red);background:linear-gradient(90deg,rgba(23,37,54,.92),rgba(23,37,54,.78) 74%,rgba(23,37,54,0));color:#edf0f3;pointer-events:none}.vh-archsig__quote-main{display:block;font:500 7px/1.3 Montserrat,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.vh-archsig__quote-sub{display:block;margin-top:3px;color:#c8d0da;font:600 italic 10px/1 "Bodoni Moda",Georgia,serif;letter-spacing:.02em;white-space:nowrap}.vh-archsig__micro{position:absolute;z-index:6;font:600 7px/1 Montserrat,Arial,sans-serif;text-transform:uppercase;letter-spacing:1.6px;white-space:nowrap}.vh-archsig__micro--a{left:28px;top:34px;color:var(--vh-steel);text-shadow:0 1px rgba(255,255,255,.7)}.vh-archsig__micro--a::before{content:"";display:inline-block;width:4px;height:4px;margin-right:6px;vertical-align:1px;background:var(--vh-gold);transform:rotate(45deg)}
+.vh-archsig__dice{position:absolute;left:22px;bottom:13px;z-index:8;width:67px;height:44px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.24))}.vh-archsig__die{position:absolute;display:grid;place-items:center;color:#d9c9a1;font:600 6px/1 Montserrat,Arial,sans-serif;background:radial-gradient(circle at 28% 26%,rgba(220,226,235,.85) 0 1px,transparent 1.3px),radial-gradient(circle at 70% 62%,rgba(183,154,97,.9) 0 1px,transparent 1.4px),radial-gradient(circle at 48% 77%,rgba(215,220,226,.7) 0 .8px,transparent 1.2px),linear-gradient(145deg,#1a2a40,#334a67 58%,#192536);box-shadow:inset 0 0 0 1px rgba(183,154,97,.72),inset 0 0 8px rgba(5,11,20,.48)}.vh-archsig__die::after{content:"";position:absolute;inset:4px;border-top:1px solid rgba(183,154,97,.34);transform:rotate(32deg);opacity:.8}.vh-archsig__die--20{width:27px;height:29px;left:7px;top:6px;clip-path:polygon(50% 0,94% 25%,86% 78%,50% 100%,12% 78%,5% 26%);transform:rotate(-12deg)}.vh-archsig__die--12{width:23px;height:24px;left:29px;top:14px;clip-path:polygon(50% 0,95% 35%,77% 96%,22% 96%,5% 35%);transform:rotate(13deg)}.vh-archsig__die--8{width:18px;height:20px;left:47px;top:4px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);transform:rotate(18deg)}.vh-archsig__orbit{position:absolute;left:1px;top:2px;width:61px;height:33px;border:1px solid rgba(52,74,98,.48);border-radius:50%;transform:rotate(-16deg)}.vh-archsig__orbit::after{content:"";position:absolute;right:4px;top:-2px;width:4px;height:4px;border-radius:50%;background:var(--vh-gold)}
+@media(max-width:620px){.vh-archsig{transform:scale(.9);transform-origin:top center;margin-bottom:-28px}}
