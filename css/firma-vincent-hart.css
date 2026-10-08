@@ -53,3 +53,33 @@
 
 /* Stronger Gabriel dice sway */
 .gh-archive__die--12{animation:gh-die-sway-strong 3.9s ease-in-out infinite;animation-delay:-.7s}.gh-archive__die--10{animation:gh-die-sway-mid 4.6s ease-in-out infinite;animation-delay:-2.1s}.gh-archive__die--8{animation:gh-die-sway-green 4.2s ease-in-out infinite;animation-delay:-1.6s}@keyframes gh-die-sway-strong{0%,100%{transform:translateX(0) translateY(0) rotate(11deg)}20%{transform:translateX(2px) translateY(-2px) rotate(25deg)}45%{transform:translateX(-2px) translateY(1px) rotate(-3deg)}70%{transform:translateX(2px) translateY(-1px) rotate(21deg)}}@keyframes gh-die-sway-mid{0%,100%{transform:translateX(0) translateY(0) rotate(-6deg)}25%{transform:translateX(-2px) translateY(1px) rotate(-18deg)}52%{transform:translateX(2px) translateY(-1px) rotate(8deg)}78%{transform:translateX(-1px) translateY(0) rotate(-14deg)}}@keyframes gh-die-sway-green{0%,100%{transform:translateX(0) translateY(0) rotate(15deg)}24%{transform:translateX(2px) translateY(-1px) rotate(28deg)}52%{transform:translateX(-2px) translateY(1px) rotate(3deg)}76%{transform:translateX(1px) translateY(-1px) rotate(23deg)}}
+
+/* ==========================================================
+   RESPONSIVE — firmas compartidas
+   Solo escala los lienzos completos; no altera su diseño interno.
+   ========================================================== */
+@media(max-width:620px){
+  .vh-archsig,.gh-archive{transform:none!important;zoom:.92;margin-left:auto!important;margin-right:auto!important}
+  .lhm-bluebell{transform:none!important;zoom:.95;margin:24px auto!important}
+  .hz-ethereal{transform:none!important;zoom:1;margin:24px auto!important}
+}
+@media(max-width:560px){
+  .vh-archsig,.gh-archive{transform:none!important;zoom:.84;margin-left:auto!important;margin-right:auto!important}
+  .lhm-bluebell{transform:none!important;zoom:.88;margin:24px auto!important}
+  .hz-ethereal{transform:none!important;zoom:.92;margin:24px auto!important}
+}
+@media(max-width:480px){
+  .vh-archsig,.gh-archive{transform:none!important;zoom:.72;margin-left:auto!important;margin-right:auto!important}
+  .lhm-bluebell{transform:none!important;zoom:.74;margin:24px auto!important}
+  .hz-ethereal{transform:none!important;zoom:.78;margin:24px auto!important}
+}
+@media(max-width:400px){
+  .vh-archsig,.gh-archive{transform:none!important;zoom:.60;margin-left:auto!important;margin-right:auto!important}
+  .lhm-bluebell{transform:none!important;zoom:.62;margin:24px auto!important}
+  .hz-ethereal{transform:none!important;zoom:.66;margin:24px auto!important}
+}
+@media(max-width:350px){
+  .vh-archsig,.gh-archive{transform:none!important;zoom:.52;margin-left:auto!important;margin-right:auto!important}
+  .lhm-bluebell{transform:none!important;zoom:.54;margin:24px auto!important}
+  .hz-ethereal{transform:none!important;zoom:.57;margin:24px auto!important}
+}
