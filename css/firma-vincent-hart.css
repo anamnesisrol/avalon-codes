@@ -111,3 +111,44 @@
 .pgw-daylight__flowers{position:absolute;z-index:9;inset:0;pointer-events:none}.pgw-daylight__daisy{--daisy-size:5px;position:absolute;width:var(--daisy-size);height:var(--daisy-size);border-radius:50%;background:var(--pgw-yellow-deep);box-shadow:0 -8px 0 3px #f5f3eb,7px -3px 0 3px #f5f3eb,5px 6px 0 3px #f5f3eb,-5px 6px 0 3px #f5f3eb,-7px -3px 0 3px #f5f3eb;filter:drop-shadow(0 0 .8px rgba(21,21,17,.62)) drop-shadow(0 2px 2px rgba(21,21,17,.15));transform-origin:center}.pgw-daylight__daisy--1{left:7%;top:17%;transform:scale(.72) rotate(8deg)}.pgw-daylight__daisy--2{right:6%;top:31%;transform:scale(.6) rotate(-12deg)}.pgw-daylight__daisy--3{right:24%;bottom:12%;transform:scale(.5) rotate(15deg)}
 .pgw-daylight__spark{position:absolute;z-index:8;right:7%;bottom:9%;width:4px;height:4px;border-radius:50%;background:var(--pgw-pink);box-shadow:-25px -8px 0 -1px var(--pgw-yellow),-53px 4px 0 -1px var(--pgw-ink);pointer-events:none}
 @media(max-width:620px){.pgw-daylight{transform:none!important;zoom:.95;margin-left:auto!important;margin-right:auto!important}}@media(max-width:560px){.pgw-daylight{transform:none!important;zoom:.88;margin-left:auto!important;margin-right:auto!important}}@media(max-width:480px){.pgw-daylight{transform:none!important;zoom:.74;margin-left:auto!important;margin-right:auto!important}}@media(max-width:400px){.pgw-daylight{transform:none!important;zoom:.62;margin-left:auto!important;margin-right:auto!important}}@media(max-width:350px){.pgw-daylight{transform:none!important;zoom:.54;margin-left:auto!important;margin-right:auto!important}}
+
+/* ==========================================================
+   RESPONSIVE — ancho disponible del mensaje
+   Los lienzos conservan proporciones y posiciones internas.
+   Las reglas anteriores quedan como respaldo para navegadores
+   sin cálculo de escala a partir de unidades de contenedor.
+   ========================================================== */
+@supports (container-type:inline-size) and (zoom:calc(1px / 1px)) {
+  :is(.signature_div,.ana-post-signature):has(:is(.vh-archsig,.hz-ethereal,.lhm-bluebell,.gh-archive,.etw-manuscript,.pgw-daylight)) {
+    container-type:inline-size;
+  }
+
+  :is(.vh-archsig,.gh-archive,.etw-manuscript) {
+    --sig-canvas-width:560px;
+  }
+  .hz-ethereal {
+    --sig-canvas-width:500px;
+  }
+  :is(.lhm-bluebell,.pgw-daylight) {
+    --sig-canvas-width:540px;
+  }
+
+  /* Respaldo para firmas mostradas fuera del contenedor del foro. */
+  :is(.vh-archsig,.hz-ethereal,.lhm-bluebell,.gh-archive,.etw-manuscript,.pgw-daylight) {
+    max-width:none;
+    transform:none!important;
+    zoom:clamp(.1,calc((100vw - 64px) / var(--sig-canvas-width)),1)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  :is(.signature_div,.ana-post-signature) :is(.vh-archsig,.hz-ethereal,.lhm-bluebell,.gh-archive,.etw-manuscript,.pgw-daylight) {
+    zoom:clamp(.1,calc((100cqw - 4px) / var(--sig-canvas-width)),1)!important;
+  }
+
+  @media(max-width:620px) {
+    :is(.vh-archsig,.gh-archive) {
+      margin-bottom:0!important;
+    }
+  }
+}
